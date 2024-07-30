@@ -1,6 +1,18 @@
 # How to Scrape Google Search Results: Python Tutorial
 
-In this tutorial, we showcase how to scrape public Google data with Python and Oxylabs [SERP Scraper API](https://oxylabs.io/products/scraper-api/serp).
+In this tutorial, we showcase how to scrape public Google data with Python and Oxylabs [SERP Scraper API](https://oxylabs.io/products/scraper-api/serp), which requires a subscription or a free trial. 
+
+  * [What is a Google SERP?](#what-is-a-google-serp)
+  * [Is it legal to scrape Google results?](#is-it-legal-to-scrape-google-results)
+  * [Scraping public Google data with Python and Oxylabs Scraper API](#scraping-public-google-data-with-python-and-oxylabs-scraper-api)
+  * [Set up a payload and send a POST request](#set-up-a-payload-and-send-a-post-request)
+    + [Customizing query parameters](#customizing-query-parameters)
+    + [Basic parameters](#basic-parameters)
+  * [Location query parameters](#location-query-parameters)
+    + [Controlling the number of results](#controlling-the-number-of-results)
+    + [Python code for scraping Google search data](#python-code-for-scraping-google-search-data)
+    + [Export scraped data to a CSV](#export-scraped-data-to-a-csv)
+    + [Handling errors and exceptions](#handling-errors-and-exceptions)
 
 ## What is a Google SERP? 
 
@@ -35,7 +47,7 @@ If you’re using Windows, choose Python instead of Python3. The rest of the com
 
 `d:\amazon>python -m pip install requests`
 
-## 2. Set up a payload and send a POST request
+## Set up a payload and send a POST request
 
 Create a new file and enter the following code:
 
@@ -195,7 +207,7 @@ if response.status_code != 200:
 pprint(response.json())
 ```
 
-### 3. Export scraped data to a CSV
+### Export scraped data to a CSV
 One of the best Google Scraper API features is the ability to parse an HTML page into JSON. For that, you don't need to use BeautifulSoup or any other library – just send the parse parameter as True. 
 
 Here is a sample payload:
