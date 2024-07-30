@@ -1,6 +1,8 @@
 # How to Scrape Google Search Results: Python Tutorial
 
-In this tutorial, we showcase how to scrape public Google data with Python and Oxylabs [SERP Scraper API](https://oxylabs.io/products/scraper-api/serp), which requires a subscription or a free trial. 
+[![Oxylabs promo code](https://user-images.githubusercontent.com/129506779/250792357-8289e25e-9c36-4dc0-a5e2-2706db797bb5.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=112)
+
+In this tutorial, we showcase how to scrape public Google data with Python and Oxylabs [SERP Scraper API](https://oxylabs.io/products/scraper-api/serp), which requires a subscription or **a free trial**.
 
   * [What is a Google SERP?](#what-is-a-google-serp)
   * [Is it legal to scrape Google results?](#is-it-legal-to-scrape-google-results)
