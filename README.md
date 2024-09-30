@@ -2,7 +2,7 @@
 
 [![Oxylabs promo code](https://user-images.githubusercontent.com/129506779/250792357-8289e25e-9c36-4dc0-a5e2-2706db797bb5.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=112)
 
-In this tutorial, we showcase how to scrape public Google data with Python and Oxylabs [SERP Scraper API](https://oxylabs.io/products/scraper-api/serp), which requires a subscription or **a free trial**.
+In this tutorial, we showcase how to scrape public Google data with Python and Oxylabs [SERP Scraper API](https://oxylabs.io/products/scraper-api/serp) (a part of Web Scraper API), which requires a subscription or **a free trial**.
 
   * [What is a Google SERP?](#what-is-a-google-serp)
   * [Is it legal to scrape Google results?](#is-it-legal-to-scrape-google-results)
@@ -35,7 +35,7 @@ The legality of scraping Google search data is largely discussed in the scraping
 1. Install required Python libraries
 To follow this guide on scraping Google search results, you’ll need the following: 
 
-- Credentials for Oxylabs' [SERP Scraper API](https://oxylabs.io/products/scraper-api/serp) – you can get a 7-day free trial;
+- Credentials for Oxylabs' [SERP Scraper API](https://oxylabs.io/products/scraper-api/serp) – you can get a 7-day free trial by registering on the [dashboard](https://dashboard.oxylabs.io/);
 - Python;
 - Requests library.
 
@@ -110,7 +110,7 @@ The first parameter is the `source`, which is really important because it sets t
 
 The default value is `Google` – when you use it, you can set the url as any Google search page, and all the other parameters will be extracted from the URL. 
 
-Although in this guide we’ll be using the `google_search` parameter, there's many others: `google_ads`, `google_hotels`, `google_images`, `google_suggest`, and more (full list [here](https://developers.oxylabs.io/scraper-apis/serp-scraper-api/google).
+Although in this guide we’ll be using the `google_search` parameter, there's many others: `google_ads`, `google_hotels`, `google_images`, `google_suggest`, and more (full list [here](https://developers.oxylabs.io/scraper-apis/web-scraper-api/google).
  
 Keep in mind that if you set the source as `google_search`, you cannot use the `url` parameter. Luckily, you can use several different parameters for acquiring public Google SERP data without having to create multiple URLs (more on that in the next paragraph.) 
 
@@ -135,7 +135,7 @@ payload = {
 That said, `google_search` and query are the two essential parameters for scraping public Google search data. If you want the API to return Google search results at this stage, you can use `payload`. Now, let’s move to the next parameter. 
 
 ## Location query parameters
-You can work with a domain parameter if you want to use a localized domain – for example, `'domain':'de'` will fetch results from google.de. If you want to see the results from Germany, use the `geo_location` parameter— `'geo_location':'Germany'`. See the [documentation](https://developers.oxylabs.io/scraper-apis/serp-scraper-api/google#geo_location) for the `geo_location` parameter to learn more about the correct values.
+You can work with a domain parameter if you want to use a localized domain – for example, `'domain':'de'` will fetch results from google.de. If you want to see the results from Germany, use the `geo_location` parameter— `'geo_location':'Germany'`. See the [documentation](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/geo-location#google) for the `geo_location` parameter to learn more about the correct values.
 
 Also, here’s what changing the locale parameter looks like: 
 
@@ -149,7 +149,7 @@ payload = {
 }
 ```
 
-To learn more about the potential values of the locale parameter, check the [documentation](https://developers.oxylabs.io/scraper-apis/serp-scraper-api/google#locale), as well.  
+To learn more about the potential values of the locale parameter, check the [documentation](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/domain-locale-results-language#locale-1), as well.  
 
 If you send the above payload, you’ll receive search results in American English from google.de, just like anyone physically located in Germany would.
 
@@ -170,7 +170,7 @@ payload = {
 }
 ```
 
-Apart from the search parameters we’ve covered so far, there are a few more you can use to fine-tune your results – see our [documentation](https://developers.oxylabs.io/scraper-apis/serp-scraper-api/google#query-parameters-1) on collecting public Google Search data. 
+Apart from the search parameters we’ve covered so far, there are a few more you can use to fine-tune your results – see our [documentation](https://developers.oxylabs.io/scraper-apis/web-scraper-api/google/search#request-parameter-values) on collecting public Google Search data. 
 
 ### Python code for scraping Google search data
 
@@ -222,7 +222,7 @@ payload = {
 }
 ```
 
-When sent to the Google Scraper API, this payload will return the results in JSON. To see a detailed JSON data structure, see our [documentation](https://developers.oxylabs.io/scraper-apis/serp-scraper-api/google/search#output-examples). 
+When sent to the Google Scraper API, this payload will return the results in JSON. To see a detailed JSON data structure, see our [documentation](https://developers.oxylabs.io/scraper-apis/web-scraper-api/google/search#structured-data). 
 
 The key highlights: 
 
