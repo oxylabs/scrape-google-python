@@ -2,6 +2,8 @@
 
 [![Oxylabs promo code](https://raw.githubusercontent.com/oxylabs/how-to-scrape-google-scholar/refs/heads/main/Google-Scraper-API-1090x275.png)](https://oxylabs.go2cloud.org/aff_c?offer_id=7&aff_id=877&url_id=112)
 
+[![](https://dcbadge.vercel.app/api/server/eWsVUJrnG5)](https://discord.gg/Pds3gBmKMH)
+
 In this tutorial, we showcase how to scrape public Google data with Python and Oxylabs [SERP Scraper API](https://oxylabs.io/products/scraper-api/serp) (a part of Web Scraper API), which requires a subscription or **a free trial**.
 
   * [What is a Google SERP?](#what-is-a-google-serp)
