@@ -112,7 +112,7 @@ The first parameter is the `source`, which is really important because it sets t
 
 The default value is `Google` – when you use it, you can set the url as any Google search page, and all the other parameters will be extracted from the URL. 
 
-Although in this guide we’ll be using the `google_search` parameter, there's many others: `google_ads`, `google_hotels`, `google_images`, `google_suggest`, and more (full list [here](https://developers.oxylabs.io/scraper-apis/web-scraper-api/google).
+Although in this guide we’ll be using the `google_search` parameter, there's many others: `google_ads`, `google_hotels`, `google_lens`, `google_suggest`, and more (full list [here](https://developers.oxylabs.io/scraper-apis/web-scraper-api/google).
  
 Keep in mind that if you set the source as `google_search`, you cannot use the `url` parameter. Luckily, you can use several different parameters for acquiring public Google SERP data without having to create multiple URLs (more on that in the next paragraph.) 
 
