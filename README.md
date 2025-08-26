@@ -250,6 +250,14 @@ Alternatively, you can also take note of the `job_id` and send a GET request to 
 http://data.oxylabs.io/v1/queries/{job_id}/results/normalized?format=csv
 ```
 
+In case you need multiple data formats, you can utilize the [multi-format output](https://developers.oxylabs.io/scraping-solutions/web-scraper-api/features/result-processing-and-storage/output-types/multi-format-output) feature to get all result types in a single API response. For example, the following will fetch parsed data, a screenshot of the page, and the raw HTML document:
+
+```
+https://data.oxylabs.io/v1/queries/{job_id}/results?type=parsed,png,raw
+```
+
+
+
 ### Handling errors and exceptions
 When scraping Google, you can run into several challenges: network issues,  invalid query parameters, or API quota limitations.
 
