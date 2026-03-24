@@ -137,7 +137,7 @@ payload = {
 That said, `google_search` and query are the two essential parameters for scraping public Google search data. If you want the API to return Google search results at this stage, you can use `payload`. Now, let’s move to the next parameter. 
 
 ## Location query parameters
-You can work with a domain parameter if you want to use a localized domain – for example, `'domain':'de'` will fetch results from google.de. If you want to see the results from Germany, use the `geo_location` parameter— `'geo_location':'Germany'`. See the [documentation](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/geo-location#google) for the `geo_location` parameter to learn more about the correct values.
+If you want to see the results from Germany, use the `geo_location` parameter— `'geo_location':'Germany'`. See the [documentation](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/geo-location#google) for the `geo_location` parameter to learn more about the correct values.
 
 Also, here’s what changing the locale parameter looks like: 
 
@@ -145,13 +145,12 @@ Also, here’s what changing the locale parameter looks like:
 payload = {
 'source':'google_search',
 'query':'newton',
-'domain':'de' ,
 'geo_location': 'Germany',
 'locale' : 'en-us'
 }
 ```
 
-To learn more about the potential values of the locale parameter, check the [documentation](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/domain-locale-results-language#locale-1), as well.  
+To learn more about the potential values of the locale parameter, check the [documentation](https://developers.oxylabs.io/scraping-solutions/web-scraper-api/features/localization/domain-locale-results-language), as well.  
 
 If you send the above payload, you’ll receive search results in American English from google.de, just like anyone physically located in Germany would.
 
@@ -184,7 +183,6 @@ from pprint import pprint
 payload = {
     'source': 'google_search',
     'query': 'shoes',
-    'domain': 'de',
     'geo_location': 'Germany',
     'locale': 'en-us',
     'parse': True,
