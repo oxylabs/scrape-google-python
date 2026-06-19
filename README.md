@@ -112,7 +112,7 @@ The first parameter is the `source`, which is really important because it sets t
 
 The default value is `Google` – when you use it, you can set the url as any Google search page, and all the other parameters will be extracted from the URL. 
 
-Although in this guide we’ll be using the `google_search` parameter, there's many others: `google_ads`, `google_travel_hotels`, `google_lens`, and more (full list [here](https://developers.oxylabs.io/scraper-apis/web-scraper-api/google).
+Although in this guide we’ll be using the `google_search` parameter, there's many others: `google_ads`, `google_travel_hotels`, `google_lens`, and more (full list [here](https://developers.oxylabs.io/api-targets/search-engines/google).
  
 Keep in mind that if you set the source as `google_search`, you cannot use the `url` parameter. Luckily, you can use several different parameters for acquiring public Google SERP data without having to create multiple URLs (more on that in the next paragraph.) 
 
@@ -137,7 +137,7 @@ payload = {
 That said, `google_search` and query are the two essential parameters for scraping public Google search data. If you want the API to return Google search results at this stage, you can use `payload`. Now, let’s move to the next parameter. 
 
 ## Location query parameters
-If you want to see the results from Germany, use the `geo_location` parameter— `'geo_location':'Germany'`. See the [documentation](https://developers.oxylabs.io/scraper-apis/web-scraper-api/features/geo-location#google) for the `geo_location` parameter to learn more about the correct values.
+If you want to see the results from Germany, use the `geo_location` parameter— `'geo_location':'Germany'`. See the [documentation](https://developers.oxylabs.io/products/web-scraper-api/features/localization) for the `geo_location` parameter to learn more about the correct values.
 
 Also, here’s what changing the locale parameter looks like: 
 
@@ -150,7 +150,7 @@ payload = {
 }
 ```
 
-To learn more about the potential values of the locale parameter, check the [documentation](https://developers.oxylabs.io/scraping-solutions/web-scraper-api/features/localization/domain-locale-results-language), as well.  
+To learn more about the potential values of the locale parameter, check the [documentation](https://developers.oxylabs.io/products/web-scraper-api/features/localization/domain-locale), as well.  
 
 If you send the above payload, you’ll receive search results in American English from google.de, just like anyone physically located in Germany would.
 
@@ -171,7 +171,7 @@ payload = {
 }
 ```
 
-Apart from the search parameters we’ve covered so far, there are a few more you can use to fine-tune your results – see our [documentation](https://developers.oxylabs.io/scraper-apis/web-scraper-api/google/search#request-parameter-values) on collecting public Google Search data. 
+Apart from the search parameters we’ve covered so far, there are a few more you can use to fine-tune your results – see our [documentation](https://developers.oxylabs.io/api-targets/search-engines/google/search/local-search#request-parameter-values) on collecting public Google Search data. 
 
 ### Python code for scraping Google search data
 
@@ -222,7 +222,7 @@ payload = {
 }
 ```
 
-When sent to the Google Scraper API, this payload will return the results in JSON. To see a detailed JSON data structure, see our [documentation](https://developers.oxylabs.io/scraper-apis/web-scraper-api/google/search#structured-data). 
+When sent to the Google Scraper API, this payload will return the results in JSON. To see a detailed JSON data structure, see our [documentation](https://developers.oxylabs.io/api-targets/search-engines/google/search/search#structured-data). 
 
 The key highlights: 
 
@@ -248,7 +248,7 @@ Alternatively, you can also take note of the `job_id` and send a GET request to 
 http://data.oxylabs.io/v1/queries/{job_id}/results/normalized?format=csv
 ```
 
-In case you need multiple data formats, you can utilize the [multi-format output](https://developers.oxylabs.io/scraping-solutions/web-scraper-api/features/result-processing-and-storage/output-types/multi-format-output) feature to get all result types in a single API response. For example, the following will fetch parsed data, a screenshot of the page, and the raw HTML document:
+In case you need multiple data formats, you can utilize the [multi-format output](https://developers.oxylabs.io/products/web-scraper-api/features/result-processing-and-storage) feature to get all result types in a single API response. For example, the following will fetch parsed data, a screenshot of the page, and the raw HTML document:
 
 ```
 https://data.oxylabs.io/v1/queries/{job_id}/results?type=parsed,png,raw
